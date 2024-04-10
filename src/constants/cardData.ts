@@ -2,8 +2,8 @@ const cardData = [
   {
     imageUrl: "",
     avatarImageUrl: "",
-    titleText: "Card 3 Title",
-    subTitleText: "Card 3 Subtitle",
+    titleText: "",
+    subTitleText: "",
   },
   {
     imageUrl: "https://picsum.photos/300/200",

@@ -1,10 +1,9 @@
 {
   "name": "scrollablecardlist",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
-  "style": "dist/index.css",
   "files": [
     "dist/*"
   ],
@@ -15,11 +14,10 @@
     "preview": "vite preview"
   },
   "peerDependencies": {
-    "react": ">=17.0.0",
-    "react-dom": ">=17.0.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "path": "^0.12.7",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
@@ -40,7 +38,7 @@
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   },
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "description": "A scrollable card list component for React.",
   "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }

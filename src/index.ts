@@ -1,1 +1,2 @@
-export { default as ScrollableCardList } from "./App";
+export { ScrollableCardList } from "./components/ScrollableCardList";
+import "./index.css";

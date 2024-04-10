@@ -1,4 +1,4 @@
-// vite.config.js
+// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
@@ -6,34 +6,30 @@ import path from "path";
 export default defineConfig({
   plugins: [react()],
   build: {
+    cssCodeSplit: false,
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"),
+      entry: path.resolve(__dirname, "src/index.ts"), // Assuming your entry file is src/index.ts
       name: "ScrollableCardList",
+      formats: ["es", "cjs"],
       fileName: (format) => {
         if (format === "es") {
           return "index.js"; // For ES module format
         } else if (format === "cjs") {
           return "index.cjs.js"; // For CommonJS format
         }
-        return `index.${format}.js`; // For any other format
+        return `index.${format}.js`; // For other formats
       },
-      formats: ["es", "cjs"], // Specify the formats you want to output
+      // You can add any other options specific to your library build configuration
     },
     rollupOptions: {
-      external: ["react", "react-dom"], // Avoid bundling react and react-dom
+      external: ["react", "react-dom"], // Specify external dependencies to avoid bundling
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
         },
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name.endsWith(".css")) {
-            return "index.css";
-          }
-          return assetInfo.name;
-        },
+        assetFileNames: "index.css", // Output CSS as index.css
       },
     },
-    cssCodeSplit: false, // Force all CSS into one file
   },
 });
