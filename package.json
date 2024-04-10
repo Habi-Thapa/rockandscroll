@@ -1,6 +1,6 @@
 {
   "name": "scrollablecardlist",
-  "version": "0.0.4",
+  "version": "0.0.15",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
