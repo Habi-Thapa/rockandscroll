@@ -1,4 +1,15 @@
 import { Circular, Rectangular, SubTitle, Title } from "./placeholders";
+
+type CardProps = {
+  isActive?: boolean;
+  cardContainerStyles?: string;
+  rectangleContainerStyles?: string;
+  circleContainerStyles?: string;
+  imageUrl?: string;
+  avatarImageUrl?: string;
+  titleText?: string;
+  subTitleText?: string;
+};
 const Card = ({
   isActive,
   cardContainerStyles,

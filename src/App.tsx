@@ -2,7 +2,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import demoCardData from "./constants/cardData";
 import Card from "./components/Card";
-
 const ScrollableCardList = ({
   cardData: propCardData,
 }: {
