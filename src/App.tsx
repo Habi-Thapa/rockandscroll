@@ -1,10 +1,10 @@
 import Card from "./components/Card";
 
-function App() {
+function App({ bgColor }: { bgColor: any }) {
   return (
-    <>
+    <div className={`flex flex-col items-center h-screen ${bgColor}`}>
       <Card />
-    </>
+    </div>
   );
 }
 
